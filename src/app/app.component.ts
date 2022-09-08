@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'citas';
+  listsCitas: any[] = [];
+
+  agregarCitas(cita: any) {
+    this.listsCitas.push(cita);
+  }
+
+  eliminarCitaListado(index: number) {
+    this.listsCitas.splice(index, 1);
+  }
+
 }
